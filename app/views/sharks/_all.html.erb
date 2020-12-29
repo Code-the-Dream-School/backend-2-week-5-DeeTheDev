@@ -1,4 +1,4 @@
-<% for post in @shark.posts  %>
+<% for post in @shark.posts.reverse_each  %>
     <ul>
 
         <% if post.body.blank? %>
@@ -6,8 +6,6 @@
             <% else %>
                 <li class="post">
                     <%= post.body %>
-                    <%= button_tag "Remove Post", data: { controller: "posts", action: "posts#remove" } %>
-                    <%= button_tag "Upvote Post", data: { controller: "posts", action: "posts#upvote" } %>
                 </li>
                 <% end %>
     </ul>
