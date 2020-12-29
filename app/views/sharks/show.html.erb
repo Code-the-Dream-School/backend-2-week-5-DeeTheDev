@@ -10,12 +10,12 @@
   <%= @shark.facts %>
 </p>
 
+<%= link_to 'Edit', edit_shark_path(@shark), :class => "btn btn-primary btn-sm", :style => "color:black" %> 
+<%= link_to 'Back', sharks_path, :class => "btn btn-primary btn-sm" %>
+
 <h2>Posts</h2>
 
 <%= render 'sharks/posts' %>
-
-<%= link_to 'Edit', edit_shark_path(@shark), :class => "btn btn-primary btn-sm", :style => "color:black" %> 
-<%= link_to 'Back', sharks_path, :class => "btn btn-primary btn-sm" %>
 
 <div data-controller="posts">
 	<div data-target="posts.show">

@@ -2,7 +2,7 @@
         <%= form_with model: [@shark, @shark.posts.build], data: { action: "posts#addBody"} do |form| %>
                 <%= form.text_area :body, placeholder: "Your post here", data: { target: "posts.body" } %>
                 <br>
-                <%= form.submit %>
+                <%= form.submit 'Create Post', :class => "btn btn-primary btn-sm", :style => "color:black"%>
         <% end %>
   <ul data-target="posts.add">
   </ul>

@@ -1,4 +1,4 @@
-<% for post in @shark.posts  %>
+<% for post in @shark.posts.reverse_each  %>
     <ul>
 
         <% if post.body.blank? %>
